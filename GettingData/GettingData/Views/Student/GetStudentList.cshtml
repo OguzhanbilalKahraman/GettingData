@@ -1,0 +1,28 @@
+﻿@using GettingData.Models
+
+@model List<Student>
+
+<h2 align="center">Öğrenci Listesi</h2>
+
+
+<ul>
+    @foreach (Student item in @Model)
+    {
+       <li>@item.firstName  @item.lastName</li>
+    }
+</ul>
+
+
+
+<h2 align="center">Öğrenci Oluşturma</h2>
+
+
+<form method="post" action="/student/addstudent">
+    <label for="name">İsim:</label><br />
+    <input type="text" id="name" name="firstName" /><br />
+    <label for="lastname">Soyisim:</label><br />
+    <input type="text" id="lastname" name="lastName" /><br />
+    <input type="submit" value="Öğrenci Kaydet" />
+
+
+</form>

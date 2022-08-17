@@ -1,0 +1,15 @@
+﻿@using GettingData.Models
+@model Product
+
+
+@if (ViewBag.Error != null )
+{
+    <h3>@ViewBag.Error</h3>
+}
+else
+{
+    <h2>Seçilen ürün</h2>
+
+    <h3>@Model.ProductName</h3>
+
+}

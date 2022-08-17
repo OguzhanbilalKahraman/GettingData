@@ -1,0 +1,15 @@
+﻿@using GettingData.Models
+@model List<Product>
+
+
+<h2>
+    Bütün Ürünler Listelendi
+</h2>
+
+
+<ul>
+    @foreach (Product item in Model)
+    {
+        <li>@item.ProductName</li>
+    }
+</ul>
